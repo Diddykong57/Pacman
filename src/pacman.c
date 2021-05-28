@@ -264,13 +264,10 @@ void final_score(int *score, double *temps){
 }
 
 void resultat(bool *lose){
-    if (*lose == true){
+    if (*lose == true)
         printf("       Dommage, vous avez perdu !");
-    } else {
-        printf("\n   (|___/)      Felicitations       (|___/)");
-        printf("\n   (='.'=)        -   -   -         (='.'=)");
-        printf("\n  ('')_('')    Vous avez gagne !   ('')_('')");
-    }
+    else
+        printf("\n   (|___/)      Felicitations       (|___/)\n   (='.'=)        -   -   -         (='.'=)\n  ('')_('')    Vous avez gagne !   ('')_('')");
 }
 
 void eat(int coordonnees[][2], size_t *tab, int *nbfantomes, int *score){

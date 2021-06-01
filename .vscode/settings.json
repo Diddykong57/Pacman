@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "beginning.h": "c",
+        "end.h": "c",
+        "init_coord.h": "c",
+        "clear.h": "c",
+        "move.h": "c",
+        "records.h": "c",
+        "show_grid.h": "c",
+        "time.h": "c",
+        "game.h": "c"
+    }
+}

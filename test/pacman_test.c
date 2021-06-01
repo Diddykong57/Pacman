@@ -15,6 +15,7 @@ struct personnage{
     int x;
     int y;
 };
+struct personnage *perso;
 
 void introduction(char *name);
 void level(int *lvl);
@@ -28,9 +29,19 @@ void resultat(bool *lose, double temps, int *lvl, int* score);
 void eat(int coordonnees[][2], size_t *tab, int *nbfantomes, int *score);
 void timer(double *temps, bool *lose);
 
-
+void test(int nb){
+    perso = (struct personnage*) malloc(nb * sizeof(struct personnage));
+    int i;
+    for (i=0; i<nb; i++){
+        perso[i].x = rand()%(NBLIGNES);
+        perso[i].y = rand()%(NBCOLONNES);
+        printf("coord[%d] = (%d,%d)\n", i, perso[i].x, perso[i].y);
+    }
+}
 
 int main(int argc, char const **argv[]) {
+    test(20);
+
     int lvl=0;
     int nbfantomes = 2;
     char key;

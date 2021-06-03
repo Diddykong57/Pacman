@@ -415,7 +415,6 @@ void move_without_ia(int coordonnees[][2], int *i){
         } else {
             if(coordonnees[*i][axe] < NBCOLONNES -1)
                 coordonnees[*i][axe] += 1;
-        printf("coord[%d] = (%d,%d)\n",*i,coordonnees[*i][0],coordonnees[*i][1]);
         }
     }
 }

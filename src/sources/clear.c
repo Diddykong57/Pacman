@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "clear.h"
+#include "../headers/clear.h"
 
 void clear_buffer(void){
     int c =0;

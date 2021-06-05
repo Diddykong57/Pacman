@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include "game.h"
+#include "../headers/game.h"
 
 void eat(int coordonnees[][2], size_t *tab, int *nbfantomes, int *score){
     int i=0;

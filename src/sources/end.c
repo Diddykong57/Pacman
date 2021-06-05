@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include "end.h"
+#include "../headers/end.h"
 
 
 void final_score(int *score, double *temps){

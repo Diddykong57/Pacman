@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "init_coord.h"
+#include "../headers/init_coord.h"
 
 #define NBETOILES 20
 #define NBLIGNES 6

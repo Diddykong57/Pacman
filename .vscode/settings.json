@@ -8,6 +8,11 @@
         "records.h": "c",
         "show_grid.h": "c",
         "time.h": "c",
-        "game.h": "c"
+        "game.h": "c",
+        "unistd.h": "c",
+        "stdlib.h": "c",
+        "stdio.h": "c",
+        "stdbool.h": "c",
+        "string.h": "c"
     }
 }

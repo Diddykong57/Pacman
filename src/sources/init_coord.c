@@ -1,10 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "../headers/init_coord.h"
-
-#define NBETOILES 20
-#define NBLIGNES 6
-#define NBCOLONNES 10
+#include "../headers/size.h"
 
 struct personnage{
     int x;
@@ -12,11 +9,12 @@ struct personnage{
 };
 
 void coord(int coordonnees[][2], size_t *tab){
+    int *size = size_grid();
     struct personnage perso[*tab];
     for (int i=0; i<(*tab); i++){
         if (i != 0){
-            perso[i].x = rand()%(NBLIGNES);
-            perso[i].y = rand()%(NBCOLONNES);
+            perso[i].x = rand()%(size[0]);
+            perso[i].y = rand()%(size[1]);
         } else {
             perso[i].x = 4;
             perso[i].y = 5;

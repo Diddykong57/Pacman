@@ -2,27 +2,25 @@
 #include <string.h>
 #include <stdlib.h>
 #include "../headers/move.h"
-
-#define NBETOILES 20
-#define NBLIGNES 6
-#define NBCOLONNES 10
+#include "../headers/size.h"
 
 void pacman(char *key, int coordonnees[][2]){
-    if (strcmp(key,"q") == 0){
-        if (coordonnees[0][1] - 1 >=0){
-        coordonnees[0][1] -= 1;
-        }
-    } else if (strcmp(key,"d") == 0){
-        if (coordonnees[0][1] + 1 < NBCOLONNES){
-        coordonnees[0][1] += 1;
-        }
-    } else if (strcmp(key,"z") == 0){
+    int *size = size_grid();
+    if (strcmp(key,"z") == 0){
         if (coordonnees[0][0] - 1 >=0){
         coordonnees[0][0] -= 1;
         }
     } else if (strcmp(key,"s") == 0){
-        if (coordonnees[0][0] + 1 < NBLIGNES){
+        if (coordonnees[0][0] + 1 < size[0]){
         coordonnees[0][0] += 1;
+        }
+    } else if (strcmp(key,"q") == 0){
+        if (coordonnees[0][1] - 1 >=0){
+        coordonnees[0][1] -= 1;
+        }
+    } else if (strcmp(key,"d") == 0){
+        if (coordonnees[0][1] + 1 < size[1]){
+        coordonnees[0][1] += 1;
         }
     }
 }
@@ -64,8 +62,8 @@ void move_ia(int coordonnees[][2], int *i){
 }
 
 void move_without_ia(int coordonnees[][2], int *i){
-    int axe = rand()%2;
-    int sens = rand()%2;
+    int *size = size_grid();
+    int axe = rand()%2, sens = rand()%2;
 
     if (sens == 0){
         if(coordonnees[*i][axe] - 1 >= 0)
@@ -73,10 +71,10 @@ void move_without_ia(int coordonnees[][2], int *i){
     }
     else{
         if(axe == 0){
-            if(coordonnees[*i][axe] < NBLIGNES -1)
+            if(coordonnees[*i][axe] < size[0] -1)
                 coordonnees[*i][axe] += 1;
         } else {
-            if(coordonnees[*i][axe] < NBCOLONNES -1)
+            if(coordonnees[*i][axe] < size[1] -1)
                 coordonnees[*i][axe] += 1;
         }
     }

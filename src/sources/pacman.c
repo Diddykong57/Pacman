@@ -14,14 +14,7 @@
 #include "../headers/show_grid.h"
 #include "../headers/time.h"
 #include "../headers/difficulties.h"
-
-#define NBLIGNES 6
-#define NBCOLONNES 10
-
-
-int nbghost(int *lvl);
-void movement(int *lvl, char *key, int coordonnees[][2], int *nbfantomes);
-
+#include "../headers/size.h"
 
 
 int main(int argc, char const **argv[]) {

@@ -1,14 +1,12 @@
 #include <stdio.h>
 #include "../headers/show_grid.h"
-
-#define NBETOILES 20
-#define NBLIGNES 6
-#define NBCOLONNES 10
+#include "../headers/size.h"
 
 void show_grid(int coordonnees[][2], size_t * tab, int *nbstar) {
-    for (int i = 0; i < NBLIGNES; i++) {
+    int *size = size_grid();
+    for (int i = 0; i < size[0]; i++) {
         printf("   ");
-        for (int j = 0; j < NBCOLONNES; j++) {
+        for (int j = 0; j < size[1]; j++) {
             printf("|   ");
             for (int k=0; k <= *tab; k++){
                 if (k == 0){
@@ -28,8 +26,6 @@ void show_grid(int coordonnees[][2], size_t * tab, int *nbstar) {
         printf("|\n");
     }
 }
-
-
 
 void show_ghost(int *i, int *k, int coordonnees[][2]){
     printf("\b\b\b\b| X ");

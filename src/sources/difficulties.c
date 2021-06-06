@@ -12,7 +12,13 @@ int nbghost(int *lvl){
     return nb;
 }
 
-void movement(int *lvl, char *key, int coordonnees[][2], int *nbfantomes){
+void movement(int *lvl, int coordonnees[][2], int *nbfantomes){
+    char key[2];
+    
+    keypress(key);
+    if(keypress == NULL)
+        printf("Saisie incorrecte");
+    
     if (*lvl > 3){
         pacman(key, coordonnees);
         fantome(coordonnees, nbfantomes);

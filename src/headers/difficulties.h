@@ -2,6 +2,6 @@
 #define DIFFICULTIES_H
 
 int nbghost(int *lvl);
-void movement(int *lvl, char *key, int coordonnees[][2], int *nbfantomes);
+void movement(int *lvl, int coordonnees[][2], int *nbfantomes);
 
 #endif

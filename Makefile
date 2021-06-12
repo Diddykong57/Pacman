@@ -1,6 +1,7 @@
 CC = gcc
-EXEC = ../../bin/pacman
-SRC = $(wildcard *.c)
+VPATH = src/sources
+EXEC = bin/pacman
+SRC = $(wildcard src/sources/*.c)
 OBJ = $(SRC:.c=.o)
 
 all : $(EXEC)
@@ -11,8 +12,9 @@ all : $(EXEC)
 $(EXEC) : $(OBJ)
 	$(CC) -o $@ $^
 
+.PHONY : clean mrproper
 clean :
-	del *.o
+	del /s *.o
 
 mrproper : clean
-	del $(EXEC)
+	del /s pacman.exe

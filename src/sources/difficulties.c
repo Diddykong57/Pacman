@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "../headers/difficulties.h"
 #include "../headers/move.h"
+#include "../headers/keypress.h"
 
 int nbghost(int *lvl){
     int nb = 0;
